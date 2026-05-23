@@ -1,0 +1,209 @@
+{
+  "info": {
+    "_postman_id": "cdf45158-a9a1-47d6-9163-ed9f606fb39c",
+    "name": "BankingApp",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53842752",
+    "_collection_link": "https://go.postman.co/collection/53842752-cdf45158-a9a1-47d6-9163-ed9f606fb39c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "createAccount",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"accountHolderName\" : \"Ramu\",\r\n    \"balance\" : 1000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/accounts/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAccountById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/accounts/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAccountById (Not Found)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/accounts/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deposit",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"amount\" : 500\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/accounts/1/deposit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts",
+            "1",
+            "deposit"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "withdraw",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"amount\" : 200\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/accounts/7/withdraw",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts",
+            "7",
+            "withdraw"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getAllAccounts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/accounts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteAccount",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/accounts/8/delete",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts",
+            "8",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteAccount (Not Found)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/accounts/999/delete",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "accounts",
+            "999",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
